@@ -46,7 +46,7 @@ class InstaBot:
         self.driver.find_element_by_xpath('//*[name()="svg" and @aria-label="Back"]').click()
     
     def sendDM(self, message):
-        self.driver.find_element_by_xpath("//textarea[@placeholder=\"Message...\"]").send_keys(message, " (~sent via Akira)")
+        self.driver.find_element_by_xpath("//textarea[@placeholder=\"Message...\"]").send_keys(message)
         self.driver.find_element_by_xpath("//button[contains(text(), \"Send\")]").click()
         sleep(1)
 
