@@ -7,7 +7,7 @@ class InstaBot:
         mobile_emulation = { "deviceName": "Nexus 5" }
 
         chrome_options = webdriver.ChromeOptions()
-
+        chrome_options.add_argument ("lang = en_us")
         chrome_options.add_experimental_option("mobileEmulation", mobile_emulation)
 
         self.driver = webdriver.Chrome(executable_path=r"D:\Dev apps\chromedriver_win32\chromedriver.exe",chrome_options = chrome_options)
@@ -53,3 +53,4 @@ class InstaBot:
 my_bot = InstaBot('user-name', 'password')
 my_bot.openDM('recievers-name')
 my_bot.sendDM('message')
+my_bot.closeDM()
