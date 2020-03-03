@@ -31,9 +31,10 @@ class InstaBot:
             self.driver.find_element_by_xpath("//button[contains(text(), 'Not Now')]").click()
             sleep(2)
             self.driver.find_element_by_xpath('//*[name()="svg" and @aria-label="Back"]').click()
+            sleep(2)
 
     def openDM(self,name):
-        self.driver.find_element_by_xpath("//span[@aria-label=\"Search & Explore\"]").click()
+        self.driver.find_element_by_xpath('//*[name()="svg" and @aria-label=\"Search & Explore\"]').click()
         sleep(4)
         self.driver.find_element_by_xpath("//input[@placeholder=\"Search\"]").send_keys(name)
         sleep(4)
